@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  min-height: 100vh;
+  background: url("../assets/bgLista.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 24px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 12px;
+  margin: 20px;
+}
+
+.item-input {
+  flex: 1;
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.item-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.add-button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-button:hover {
+  opacity: 0.9;
+}
+
+.shopping-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  background: #f7f7f7d6;
+  border-radius: 10px;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: background 0.2s;
+}
+
+.item:hover {
+  background: #eee;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-name {
+  font-size: 1rem;
+}
+
+.item.checked .item-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.delete-btn:hover {
+  color: #f61900ff;
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}
